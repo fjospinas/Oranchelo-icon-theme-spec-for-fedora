@@ -27,6 +27,7 @@ inspired by "Corny icons" by Patryk Goworowski.
 %autosetup
 
 %build
+find -type f -executable -exec chmod -x {} \;
 
 %install
 mkdir -p %{buildroot}%{install_dir}
@@ -34,6 +35,7 @@ cp -r %{themes_base_name}* %{buildroot}%{install_dir}
 
 %files
 %license LICENSE
+%doc README.md
 %{install_dir}/%{themes_base_name}*
 
 %post
@@ -48,3 +50,14 @@ if [ $1 -eq 0 ] ; then
 fi
 
 %changelog
+* Wed Feb 21 2018 Adolfo Silerio <zayronxio@gmail.com> - 0.7.5.9-1
+- Franz
+- Kicad
+- Vmplayer
+- Slack
+- Smartgit
+- Qalculator
+- Grsync
+- Bijiben
+- Vivaldi
+- Skype
